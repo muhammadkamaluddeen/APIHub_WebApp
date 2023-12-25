@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h4>TempData_Demo</h4>
+
+<h5>@TempData["Message"]</h5>
+
+@{
+    TempData.Keep();
+ }
+
+<a asp-action="TempData_Demo2" asp-controller="Demo"> Go to TempData_Demo2</a>

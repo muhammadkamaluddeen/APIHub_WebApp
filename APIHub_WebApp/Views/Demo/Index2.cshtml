@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Index2 Demo to pass data using DataView</h1>
+<p>Number of users is: @ViewData["UserCount"]</p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>UserName</th>
+            <th>UserType</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewData["UserList"] as List<User>)
+        {
+            <tr>
+                <td>@item.UserId</td>
+                <td> @item.UserName</td>
+                <td> @item.UserType</td>
+                <td> @item.Password</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

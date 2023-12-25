@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Index Demo to pass data using ViewBag</h1>
+<p>Number of users is: @ViewBag.UserCount</p>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>UserId</th>
+        <th>UserName</th>
+        <th>UserType</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in ViewBag.UserList)
+    {
+        <tr>
+            <td>@item.UserId</td>
+            <td> @item.UserName</td>
+            <td> @item.UserType</td>
+            <td> @item.Password</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+
+<hr />
+
+@* HTML helper to navigate to another view *@
+@Html.ActionLink("Go to Privacy Page", "Privacy", "Home")
+<hr />
+
+@* Tag helper to navigate to another view *@
+<a asp-controller="Home" asp-action="Privacy">Go to Privacy Page</a>

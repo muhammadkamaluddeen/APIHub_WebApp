@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>Number of users is: @ViewBag.UserCount</p>
+
+
+<table border="3" cellspacing="2" cellpadding="2" >
+    <tr>
+        <th>UserId</th>
+         <th>UserName</th>
+        <th>UserType</th>
+        <th>Password</th>
+    </tr>
+   
+        @foreach (var item in ViewBag.UserList)
+        {
+        <tr>
+            <td>@item.UserId</td>
+            <td> @item.UserName</td>
+            <td> @item.UserType</td>
+            <td> @item.Password</td>
+        </tr>
+        }
+
+</table>    
+
+
+
+<hr/>
+
+@* HTML helper to navigate to another view *@
+@Html.ActionLink("Go to Privacy Page", "Privacy","Home")
+<hr/>
+
+@* Tag helper to navigate to another view *@
+<a asp-controller="Home" asp-action="Privacy">Go to Privacy Page</a>
+
+
