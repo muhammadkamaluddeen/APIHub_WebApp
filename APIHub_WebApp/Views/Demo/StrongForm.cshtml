@@ -1,0 +1,52 @@
+﻿@model APIHub_WebApp.Models.LoginViewModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StrongForm</title>
+</head>
+<body>
+   @*  @using (Html.BeginForm("LoginStrongForm","Demo", FormMethod.Post))
+    {
+        <div>
+            Username: @Html.TextBoxFor(m => m.UserName)
+        </div>
+
+            <div>
+            Password: @Html.PasswordFor(m => m.Password)
+        </div>
+
+        <div>
+          <input type="submit" value="login"/>
+        </div>
+
+
+    } *@
+
+    <form asp-action="LoginStrongForm" asp-controller="Demo" method="post">
+        <table>
+
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username" /></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" /></td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login"  /></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

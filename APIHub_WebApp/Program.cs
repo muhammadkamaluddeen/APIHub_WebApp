@@ -1,4 +1,10 @@
+using APIHub_WebApp;
+using APIHub_WebApp.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -9,6 +15,8 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
     
 });
+
+builder.Services.AddScoped<IUser, CreateUserService>();
 
 var app = builder.Build();
 

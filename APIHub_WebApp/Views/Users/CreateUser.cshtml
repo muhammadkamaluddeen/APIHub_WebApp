@@ -1,0 +1,26 @@
+﻿@model APIHub_WebApp.Models.CreateUserRes;
+@{
+    Layout = null;
+
+    var loginStatus = "Failed";
+    if (@Model.ResponseCode == "00")
+    {
+        loginStatus = "Successful";
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateUser</title>
+</head>
+<body>
+
+
+    <h3>User Creation @loginStatus </h3>
+
+    <a asp-action="Index" asp-controller="Users">Go to Form</a>
+</body>
+</html>

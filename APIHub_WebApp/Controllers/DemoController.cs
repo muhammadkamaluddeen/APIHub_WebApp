@@ -12,7 +12,9 @@ namespace APIHub_WebApp.Controllers
            new User(){UserId="212360",UserName="Aliyu.Nura", UserType="Sub-Admin", Password = "33445"},
          };
 
-      
+
+
+
         //Used ViewBag to pass data from the controller to the view
         public IActionResult Index()
         {
@@ -86,5 +88,65 @@ namespace APIHub_WebApp.Controllers
             return View();
         }
 
+        //------------------------------------------------------------------------------------------------------
+        
+        // Weakly typed form
+        public IActionResult WeakForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult LoginForm(string username, string password)
+        {
+            ViewBag.Username = username;
+            ViewBag.Password = password;
+
+            return View();
+        }
+
+        //------------------------------------------------------------------------------------------------------
+        //Strongly typed form
+
+        public IActionResult StrongForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult LoginStrongForm(LoginViewModel loginView)
+        {
+            ViewBag.UserName = loginView.UserName;
+            ViewBag.Password = loginView.Password;
+
+            return View();
+
+        }
+
+        //----------------------------------------------------------------------------------------------Model Binding
+        
+        public IActionResult UserDetails()
+        {
+            LoginViewModel loginViewModel = new LoginViewModel() {
+
+             UserName = "Kamal",
+             Password ="12345"
+            };
+
+            return View(loginViewModel);
+        }
+
+        public IActionResult UserDetailsList()
+        {
+            var users  = new List<LoginViewModel>()
+            {
+              new LoginViewModel() {UserName="Musa", Password="12345"},
+                 new LoginViewModel() {UserName="Isah", Password="12345"},
+                    new LoginViewModel() {UserName="Bello", Password="12345"}
+
+            };
+
+            return View(users);
+        }
     }
 }

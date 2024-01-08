@@ -1,0 +1,22 @@
+﻿@model IList<APIHub_WebApp.Models.LoginViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserDetailsList</title>
+</head>
+<body>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li>Username: @item.UserName Password: @item.Password</li>
+        }
+    </ul>
+</body>
+</html>

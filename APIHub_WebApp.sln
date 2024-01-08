@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIHub_WebApp", "APIHub_WebApp\APIHub_WebApp.csproj", "{2114C617-616D-41E5-99E6-90393C365BC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIHub_WebApp", "APIHub_WebApp\APIHub_WebApp.csproj", "{2114C617-616D-41E5-99E6-90393C365BC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp_API", "WebApp_API\WebApp_API.csproj", "{3B18230A-29B9-4931-9F88-144101A60D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2114C617-616D-41E5-99E6-90393C365BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2114C617-616D-41E5-99E6-90393C365BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2114C617-616D-41E5-99E6-90393C365BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B18230A-29B9-4931-9F88-144101A60D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B18230A-29B9-4931-9F88-144101A60D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B18230A-29B9-4931-9F88-144101A60D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B18230A-29B9-4931-9F88-144101A60D74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
